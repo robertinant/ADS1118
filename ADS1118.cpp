@@ -408,7 +408,9 @@ double ADS1118::readFarenheit(){
 	//Serial.println(temp);
 	delay(50);
 	temp = ADCcode2temp(temp);
+	delay(50);
 	temp = temp*9/5+320;
+	delay(10);
 	tempConv = double(temp)/10;
 	return tempConv;
 }
